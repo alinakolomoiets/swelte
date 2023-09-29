@@ -1,5 +1,16 @@
 <script>
 	export let segment;
+	import {goto , stores} from '@sapper/app';
+	import {post} from 'utils.js'
+
+	const {page , session} = stores();
+
+	async function logout(){
+	await post('auth/logout');
+	$session.user = null;
+	goto('/');
+	}
+
 </script>
 
 <style>
@@ -51,5 +62,6 @@
 <nav>
 	<ul>
 		<li><a aria-current="{segment === 'register' ? 'page' : undefined}" href="register">register</a></li>
+		<li><a aria-current="{segment === 'login' ? 'page' : undefined}" href="login">login</a></li>
 	</ul>
 </nav>
