@@ -29,7 +29,7 @@
 </script>
 
 <svelte:head>
-	<title>Sign in • hehehe</title>
+	<title>Sign in • hehehe   </title>
 </svelte:head>
 
 <div class="auth-page">
